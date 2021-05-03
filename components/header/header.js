@@ -1,10 +1,15 @@
 import React from 'react';
-import {View, Text, StyleSheet, ImagePropTypes} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+import Colors from '../../constants/colors';
 
 const header = (props) => {
   return (
     <View style={styles.header}>
+      <Icon name="rocket" size={30} color="#900" />
       <Text style={styles.headerTitle}>{props.title}</Text>
+      <Icon name="rocket" size={30} color="#900" />
     </View>
   );
 };
@@ -14,9 +19,10 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 150,
     paddingTop: 15,
-    backgroundColor: '#f7287b',
+    backgroundColor: Colors.primary,
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
     borderBottomRightRadius: 100,
   },
   headerTitle: {
